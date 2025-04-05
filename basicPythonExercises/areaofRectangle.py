@@ -1,5 +1,5 @@
 import math
-#Calvculate rectangle area
+#Calculate rectangle area
 def calculateArea(length,width):
     area=length*width
     return area
