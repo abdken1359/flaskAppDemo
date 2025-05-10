@@ -7,6 +7,11 @@
     <input name="password" type="password" placeholder="Password">
     <input type="submit" value="Login">
     </form>
+    <h1>File Upload</h1>
+    <form method="post" action="{{url_for('file_upload')}}" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*">
+    <input type="submit" value="Submit">
+    </form>
     <p>{{myResult}}</p>
     <p>{{evenTens}}</p>
     <ul>

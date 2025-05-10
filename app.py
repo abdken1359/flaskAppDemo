@@ -22,6 +22,9 @@ def other():
     some_text="Just a text sentence"
     return render_template("other.html",some_text=some_text)
 
+@app.route("/file_upload",methods=["POST"])
+def file_upload():
+     return "Almost done with the magic"
 
 @app.template_filter("alternate_case")
 def alternate_case(s):
