@@ -2,6 +2,11 @@
  {%block title%}Notetaker{%endblock%}
  {%block content%}
     <h1>Hello world!</h1>
+    <form method="post" action="{{url_for('home')}}">
+    <input name="username" type="username" placeholder="Username">
+    <input name="password" type="password" placeholder="Password">
+    <input type="submit" value="Login">
+    </form>
     <p>{{myResult}}</p>
     <p>{{evenTens}}</p>
     <ul>
@@ -15,7 +20,7 @@
     {% endfor %}
     </ul>
     <p>
-    <a href="/other">Go here</a>
+    <a href="{{url_for('other')}}">Go here</a>
     </p>
 
 {%endblock%}
