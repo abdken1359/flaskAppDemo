@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+ {%block title%}Notetaker{%endblock%}
+ {%block content%}
+    <h1>Hello world!</h1>
+    <p>{{myResult}}</p>
+    <p>{{evenTens}}</p>
+    <ul>
+    {% for even in evenTens%}
+     {% if even == 30%}
+       <li style="color: red;">{{even}}</li>
+       {%else%}
+     {%endif%}
+     <li>{{even}}</li>
+
+    {% endfor %}
+    </ul>
+    <p>
+    <a href="/other">Go here</a>
+    </p>
+
+{%endblock%}
