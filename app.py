@@ -1,5 +1,5 @@
 # Imports
-from flask import Flask, request,render_template ,send_from_directory,session
+from flask import Flask, request,render_template ,send_from_directory,session,make_response
 from flask_scss import Scss
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -24,7 +24,7 @@ def set_session():
 def get_session():
     name=session["name"]
     age=session["age"]
-    return render_template("index.html")
+    return render_template("index.html",message=f"Hi, my name is {name}, and I am {age}")
      
 
 @app.template_filter("alternate_case")
