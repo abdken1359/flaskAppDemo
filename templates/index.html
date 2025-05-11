@@ -1,31 +1,16 @@
 {% extends "base.html" %}
  {%block title%}Notetaker{%endblock%}
  {%block content%}
-    <h1>Hello world!</h1>
-    <form method="post" action="{{url_for('home')}}">
-    <input name="username" type="username" placeholder="Username">
-    <input name="password" type="password" placeholder="Password">
-    <input type="submit" value="Login">
-    </form>
-    <h1>File Upload</h1>
-    <form method="post" action="{{url_for('file_upload')}}" enctype="multipart/form-data">
-    <input type="file" name="file" accept="image/*">
-    <input type="submit" value="Submit">
-    </form>
-    <p>{{myResult}}</p>
-    <p>{{evenTens}}</p>
-    <ul>
-    {% for even in evenTens%}
-     {% if even == 30%}
-       <li style="color: red;">{{even}}</li>
-       {%else%}
-     {%endif%}
-     <li>{{even}}</li>
-
-    {% endfor %}
-    </ul>
-    <p>
-    <a href="{{url_for('other')}}">Go here</a>
-    </p>
+ <section class="container p-4" x-data="{
+ message:'Welcome to my flask project!'
+ }" x-cloak>
+    <h1 class="is-size-1 is-bold">Hello world!</h1>
+    <p x-text="message"></p>
+    <p class="block">{{message|default("Normal data")}}</p>
+    <a href="/set_session" class="button is-danger block">Click me</a>
+    <a href="/get_session" class="button is-primary">Get session</a>
+  </section>
+    
+    
 
 {%endblock%}
