@@ -6,4 +6,4 @@ class Person(db.Model):
     age=db.Column(db.Integer,nullable=False)
     job=db.Column(db.Text,nullable=False)
     def __repr__(self):
-        return f"{self.name} is {self.age} years old, and has a ob called {self.job}"
+        return f"{self.name} is {self.age} years old, and is a {self.job}. "

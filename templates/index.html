@@ -4,8 +4,38 @@
  <section class="container p-4" x-data="{
  message:'Welcome to my flask project!'
  }" x-cloak>
-    <h1 class="is-size-1 is-bold">Hello world!</h1>
+    <h1 class="title">Hello world!</h1>
     <p x-text="message"></p>
+    <ul class="block">
+      {%for person in people%}
+      <li>
+        {{person}}
+      </li>
+      {% endfor %}
+    </ul>
+    <h1 class="title block">Add new Member</h1>
+    <form action="{{url_for('add_someone')}}" method="POST" class="block">
+     
+      <label for="username">Username</label>
+     
+      <input type="text" name="username" required  id="username" placeholder="Enter member name">
+
+      
+      <label for="age">Age</label>
+      
+      <input type="number" required min="1" name="age" id="age" placeholder="Enter member age">
+     
+      
+     
+      <label for="job">Job</label>
+      
+      <input type="text" required name="job"  id="job" placeholder="Enter member Current Job">
+    
+      <button type="submit">Add member</button>
+      
+
+
+    </form>
    
   </section>
     
