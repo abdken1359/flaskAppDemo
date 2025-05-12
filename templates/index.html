@@ -2,41 +2,12 @@
  {%block title%}Notetaker{%endblock%}
  {%block content%}
  <section class="container p-4" x-data="{
- message:'Welcome to my flask project!'
+ message:'Welcome to the very begining of my simple task manager, a prologue to Listup, a full web app which will be available in some months!'
  }" x-cloak>
-    <h1 class="title">Hello world!</h1>
-    <p x-text="message"></p>
-    <ul class="block">
-      {%for person in people%}
-      <li>
-        {{person}}
-      </li>
-      {% endfor %}
-    </ul>
-    <h1 class="title block">Add new Member</h1>
-    <form action="{{url_for('add_someone')}}" method="POST" class="block">
-     
-      <label for="username">Username</label>
-     
-      <input type="text" name="username" required  id="username" placeholder="Enter member name">
-
-      
-      <label for="age">Age</label>
-      
-      <input type="number" required min="1" name="age" id="age" placeholder="Enter member age">
-     
-      
-     
-      <label for="job">Job</label>
-      
-      <input type="text" required name="job"  id="job" placeholder="Enter member Current Job">
-    
-      <button type="submit">Add member</button>
-      
-
-
-    </form>
-   
+    <h1 class="title block">Taski Apogee!</h1>
+    <p x-text="message" class="block"></p>
+    <a href="/signup" class="button is-primary">Signup</a>
+    <a href="/login" class="button secondary">Login</a>
   </section>
     
     

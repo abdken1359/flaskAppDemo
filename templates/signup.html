@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%block title%}Sign Up{%endblock%}
+{% block content%}
+<section class="container mt-5">
+<h1 class="title is-5">Signup<h1>
+<form class="box" action="/signup" method="post">
+
+<div class="field">
+<label class="label" for="username">Username</label>
+<input class="input" type="text" id="username" placeholder="Enter Username" name="username" required>
+
+</div>
+
+<div class="field">
+<label class="label" for="password">Password</label>
+<input class="input" type="password" id="password" placeholder="Enter Username" name="password" required>
+
+</div>
+<div class="field is-grouped">
+<input type="submit" class="button is-primary" value="Create account">
+<a href="/login" class="button is-link is-ghost">Login</a>
+</div>
+</form>
+</section>
+{%endblock%}
